@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Settings, Building2, KanbanSquare, ListChecks, Palette, Plug, Users, ChevronRight, Check } from 'lucide-react';
+import { Building2, KanbanSquare, ListChecks, Palette, Plug, Users, ChevronRight, Check } from 'lucide-react';
 import { PageHeader } from '@/components/layout/page-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input, Field, Textarea, Label } from '@/components/ui/input';
+import { Input, Field, Textarea } from '@/components/ui/input';
 import { Select } from '@/components/ui/select';
 import { Switch } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';

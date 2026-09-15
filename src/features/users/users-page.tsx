@@ -65,16 +65,19 @@ export function UsersPage() {
 
       if (error) { setLoading(false); return; }
 
-      const mapped: Member[] = (data || []).map((row: any) => ({
-        id: row.id,
-        name: row.profiles?.full_name || row.profiles?.email?.split('@')[0] || 'Unknown',
-        email: row.profiles?.email || '',
-        role: row.role,
-        team: '—',
-        status: 'active' as const,
-        lastActive: 'recently',
-        deals: 0,
-      }));
+      const mapped: Member[] = (data || []).map((row) => {
+        const profile = row.profiles?.[0];
+        return {
+          id: row.id,
+          name: profile?.full_name || profile?.email?.split('@')[0] || 'Unknown',
+          email: profile?.email || '',
+          role: row.role as Member['role'],
+          team: '—',
+          status: 'active' as const,
+          lastActive: 'recently',
+          deals: 0,
+        };
+      });
 
       setMembers(mapped);
       setLoading(false);

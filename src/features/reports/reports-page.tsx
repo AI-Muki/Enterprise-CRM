@@ -2,9 +2,8 @@ import { BarChart3, Plus, Download, TrendingUp, TrendingDown } from 'lucide-reac
 import { PageHeader } from '@/components/layout/page-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { AreaChartCard, BarChartCard, DonutChartCard } from '@/components/charts';
-import { cn, formatCurrency, formatNumber, formatPercent } from '@/lib/utils';
+import { formatNumber } from '@/lib/utils';
 
 const reportTemplates = [
   { id: '1', name: 'Sales Performance', description: 'Revenue by rep and team', icon: TrendingUp, type: 'line' },

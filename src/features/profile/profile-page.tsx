@@ -10,13 +10,6 @@ import { Spinner } from '@/components/ui/misc';
 import { supabase } from '@/lib/supabase';
 import { useAuthStore } from '@/store/auth-store';
 
-interface ProfileData {
-  full_name: string;
-  email: string;
-  avatar_url: string | null;
-  title: string | null;
-}
-
 export function ProfilePage() {
   const { user } = useAuthStore();
   const [loading, setLoading] = useState(true);
@@ -49,7 +42,6 @@ export function ProfilePage() {
       }
 
       if (data) {
-        const parts = (data.full_name || '').split(' ');
         setFullName(data.full_name || '');
         setEmail(data.email || user.email);
         setTitle(data.title || '');

@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { Session, User } from '@supabase/supabase-js';
+import type { Session } from '@supabase/supabase-js';
 
 export type Role = 'owner' | 'admin' | 'manager' | 'sales_rep' | 'viewer';
 

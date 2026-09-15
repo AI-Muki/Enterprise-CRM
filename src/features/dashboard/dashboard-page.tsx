@@ -6,11 +6,8 @@ import {
   CheckSquare,
   TrendingUp,
   TrendingDown,
-  ArrowUpRight,
   Phone,
   Mail,
-  Calendar,
-  FileText,
   UserPlus,
   StickyNote,
   KanbanSquare as KanbanIcon,
@@ -21,9 +18,9 @@ import { PageHeader } from '@/components/layout/page-header';
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarGroup } from '@/components/ui/avatar';
+import { Avatar } from '@/components/ui/avatar';
 import { Select } from '@/components/ui/select';
-import { SkeletonCard, Skeleton } from '@/components/ui/skeleton';
+import { SkeletonCard } from '@/components/ui/skeleton';
 import { Sparkline } from '@/components/charts';
 import { AreaChartCard, BarChartCard, DonutChartCard } from '@/components/charts';
 import { cn, formatCurrency, formatNumber, formatPercent } from '@/lib/utils';

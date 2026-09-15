@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Users, Plus, Search, Filter, Upload, MoreHorizontal, Mail, Phone, Building2, CheckCircle2 } from 'lucide-react';
+import { Plus, Search, Filter, Upload, MoreHorizontal, Mail, Phone, Building2, CheckCircle2 } from 'lucide-react';
 import { PageHeader } from '@/components/layout/page-header';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

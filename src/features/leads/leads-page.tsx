@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UserPlus, Plus, Star, Phone, Mail, Calendar, ArrowRight } from 'lucide-react';
+import { Plus, Phone, Mail, Calendar } from 'lucide-react';
 import { PageHeader } from '@/components/layout/page-header';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

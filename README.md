@@ -214,6 +214,25 @@ The app uses a custom design system built on Tailwind CSS:
 - **Dark mode**: Class-based with CSS variable overrides, persisted to localStorage via Zustand
 - **Border radius**: Single `--radius` token with derived sizes (sm, md, lg, xl, 2xl)
 
+## CI/CD
+
+The project includes two GitHub Actions workflows in `.github/workflows/`:
+
+### CI (`ci.yml`)
+Runs on every push and pull request to `main` and `develop`. Two jobs:
+
+1. **Quality** — installs dependencies with `npm ci`, runs TypeScript type checking (`npm run typecheck`) and ESLint (`npm run lint`). Fails the pipeline if either finds errors.
+2. **Build** — runs after quality passes, builds the production bundle (`npm run build`), and uploads the `dist/` folder as a 7-day artifact for inspection.
+
+### Deploy (`deploy.yml`)
+Runs only on pushes to `main` (after merge). Steps:
+
+1. Installs dependencies and builds the production bundle
+2. Deploys to Netlify using `nwtgck/actions-netlify@v3.0`
+3. Requires two repository secrets: `NETLIFY_AUTH_TOKEN` and `NETLIFY_SITE_ID`
+
+To enable Netlify deployment, add these secrets in GitHub under Settings > Secrets and variables > Actions. If you use a different host (Vercel, Cloudflare Pages, etc.), swap the deploy step for the matching action.
+
 ## License
 
 Private project.

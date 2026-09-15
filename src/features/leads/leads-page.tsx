@@ -83,14 +83,14 @@ export function LeadsPage() {
                 <div className="flex items-center gap-2">
                   <span className={cn('h-2 w-2 rounded-full', stage.color)} />
                   <span className="text-sm font-semibold">{stage.label}</span>
-                  <span className="text-xs text-muted-foreground">{leads.length}</span>
+                  <span className="text-xs text-muted-foreground">{stageLeads.length}</span>
                 </div>
                 <span className="text-xs font-medium text-muted-foreground">
-                  {formatCurrency(leads.reduce((s, l) => s + l.value, 0), true)}
+                  {formatCurrency(stageLeads.reduce((s, l) => s + l.value, 0), true)}
                 </span>
               </div>
               <div className="space-y-2">
-                {leads.map((lead) => (
+                {stageLeads.map((lead) => (
                   <Card
                     key={lead.id}
                     draggable
@@ -129,7 +129,7 @@ export function LeadsPage() {
                     </CardContent>
                   </Card>
                 ))}
-                {leads.length === 0 && (
+                {stageLeads.length === 0 && (
                   <div className="rounded-lg border border-dashed border-border py-8 text-center text-xs text-muted-foreground">
                     No leads in this stage
                   </div>
